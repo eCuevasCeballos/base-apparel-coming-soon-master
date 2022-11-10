@@ -119,7 +119,7 @@ body {
     padding-left: 250px;
     align-items: center;
     align-content: center;
-    height: 940px;
+    height: 970px;
     max-width: 1205px;
   }
   .brand-logo {
@@ -149,7 +149,7 @@ body {
   .hero-desktop {
     display: flex;
     position: absolute;
-    height: 940px;
+    height: 970px;
     width: auto;
     top: 0;
     right: 0;
