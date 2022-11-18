@@ -21,33 +21,39 @@
           alt="hero-desktop"
           class="hero-desktop"
         />
-        <img src="images/logo.svg" alt="brand-logo" class="brand-logo" />
-        <img
-          src="images/hero-mobile.jpg"
-          alt="hero-mobile"
-          class="hero-mobile"
-        />
-        <h1 class="header"><span class="header--2">We're</span> coming soon</h1>
-        <p class="text">
-          Hello fellow shoppers! We're currently building our new fashion store.
-          Add your email below to stay up-to-date with announcements and our
-          launch deals.
-        </p>
-        <input type="email" placeholder="Email Address" class="email" />
-        <button class="submit">
+        <div class="sub-container">
+          <img src="images/logo.svg" alt="brand-logo" class="brand-logo" />
           <img
-            src="images/icon-arrow.svg"
-            alt="icon-arrow"
-            class="icon-arrow"
+            src="images/hero-mobile.jpg"
+            alt="hero-mobile"
+            class="hero-mobile"
           />
-        </button>
+          <h1 class="header">
+            <span class="header--2">We're</span> coming soon
+          </h1>
+          <p class="text">
+            Hello fellow shoppers! We're currently building our new fashion
+            store. Add your email below to stay up-to-date with announcements
+            and our launch deals.
+          </p>
+          <div class="email-container">
+            <input type="email" placeholder="Email Address" class="email" />
+            <img
+              src="images/icon-error.svg"
+              alt="icon-error"
+              class="icon-error error"
+            />
+            <button class="submit">
+              <img
+                src="images/icon-arrow.svg"
+                alt="icon-arrow"
+                class="icon-arrow"
+              />
+            </button>
+            <p class="error-msg error">Please provide a valid email</p>
+          </div>
+        </div>
       </div>
-      <img
-        src="images/icon-error.svg"
-        alt="icon-error"
-        class="icon-error error"
-      />
-      <p class="error-msg error">Please provide a valid email</p>
     </main>
     <script src="script.js"></script>
   </body>

@@ -31,6 +31,10 @@ body {
     fixed;
 }
 
+.main-container {
+  margin: 0 auto;
+}
+
 /* Page layout and styles */
 .brand-logo {
   margin: 40px 0;
@@ -80,22 +84,27 @@ body {
   letter-spacing: 1px;
 }
 .submit {
-  position: absolute;
   background-color: hsl(0, 74%, 74%);
-  margin-left: -100px;
   height: 50px;
   width: 70px;
   border-radius: 30px;
   border: none;
   box-shadow: 5px 5px 30px 5px hsl(0, 80%, 86%);
+  grid-row: 2;
+  position: absolute;
+  right: 7%;
+
+  transform: translateX(-7%);
 }
 .submit:active {
   background-color: hsl(0, 80%, 86%);
 }
+
 .icon-error {
   position: absolute;
-  margin-top: -37px;
-  margin-left: 230px;
+  right: 30%;
+  margin-top: 15px;
+  transform: translateX(-30%);
 }
 .error-msg {
   color: hsl(0, 93%, 68%);
@@ -106,35 +115,96 @@ body {
 }
 
 @media screen and (min-width: 700px) {
-  body{
+  .icon-error {
+    right: 20%;
+  }
+  .submit {
+    right: 1%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body {
+    width: 100%;
+    min-height: 1080px;
     overflow: hidden;
   }
- .main-container{
-  width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  align-items: center;
- }
- .hero-mobile{
-  display: none;
- }
- .hero-desktop{
-  display: block;
-  grid-column: 2 / 3;
-  grid-row: 1 / 5;
-  align-self: center;
- }
- .header, .text, .email, .icon-error,.error-msg, .brand-logo{
-  grid-column: 1 / 2;
-  margin: 0;
-  padding: 0;
- }
- .submit{
-  position: relative;
-  margin: 0;
- }
- .icon-error, .icon-error{
-  position: relative;
- }
+  .main-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    width: 100%;
+    min-height: 1080px;
+  }
+  .hero-mobile {
+    display: none;
+  }
+  .hero-desktop {
+    display: block;
+    grid-column: 2 / 3;
+    height: 1080px;
+    width: auto;
+    margin: 0;
+  }
+  .sub-container {
+    grid-column: 1 / 2;
+    grid-row: 1;
+    width: 100%;
+    background: url("./images/bg-pattern-desktop.svg") no-repeat center/cover;
+    padding: 0;
+    padding-left: 200px;
+    justify-content: start;
+    justify-items: start;
+    text-align: start;
+  }
+  .brand-logo {
+    margin-top: 70px;
+  }
+  .header {
+    text-align: start;
+    margin-top: 120px;
+    width: 50%;
+    line-height: 1.2;
+    letter-spacing: 20px;
+    font-size: 4rem;
+  }
+  .text {
+    margin: 0;
+    margin-top: 30px;
+    width: 60%;
+    text-align: start;
+    font-size: 1.2rem;
+  }
+  .email-container {
+    display: grid;
+    align-content: end;
+    align-items: end;
+    width: 60%;
+  }
+  .email {
+    margin: 0;
+    margin-top: 50px;
+    width: 99%;
+    padding-top: 5px;
+    grid-row: 1;
+    grid-column: 1 / 2;
+  }
+  .error-msg {
+    margin: 0;
+    margin-top: 20px;
+  }
+
+  .submit {
+    position: static;
+    grid-row: 1;
+    grid-column: 1 / 2;
+    justify-self: end;
+    width: 80px;
+  }
+  .icon-error {
+    position: static;
+    grid-row: 1;
+    padding-bottom: 15px;
+    grid-column: 1 / 2;
+    justify-self: end;
+    padding-right: 75px;
+  }
 }
